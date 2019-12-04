@@ -44,9 +44,11 @@ extern "C" {
 
 namespace perception_pipeline
 {
-    class ObjectClassesServer
+    class ObjectClassesServerComponent: public rclcpp::Node
     {
-
+    public:
+        PERCEPTION_PIPELINE_OBJECT_CLASSES_SERVER_PUBLIC
+        explicit ObjectClassesServerComponent(const rclcpp::NodeOptions & options);
     };
 }
 
