@@ -42,6 +42,9 @@ extern "C" {
 //headers in ROS2
 #include <rclcpp/rclcpp.hpp>
 
+//headers in perception_pipeline
+#include <perception_msgs/msg/object_classes.hpp>
+
 namespace perception_pipeline
 {
     class ObjectClassesServerComponent: public rclcpp::Node
