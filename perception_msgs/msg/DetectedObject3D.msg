@@ -1,0 +1,5 @@
+std_msgs/Header header
+perception_msgs/ObjectShape3D shape
+perception_msgs/ObjectPose3D object_pose
+perception_msgs/Score[] score
+perception_msgs/SourceInfo source
