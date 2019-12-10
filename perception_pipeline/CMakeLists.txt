@@ -37,7 +37,7 @@ ament_target_dependencies(object_classes_server_node rclcpp rclcpp_components pe
 # install executables/libs
 install(TARGETS
   object_classes_server_node
-  DESTINATION lib/pcl_apps
+  DESTINATION lib/perception_pipeline
 )
 
 install(TARGETS
@@ -45,6 +45,9 @@ install(TARGETS
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)
+
+install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

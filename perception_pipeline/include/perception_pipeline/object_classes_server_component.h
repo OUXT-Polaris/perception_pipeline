@@ -45,6 +45,13 @@ extern "C" {
 //headers in perception_pipeline
 #include <perception_msgs/msg/object_classes.hpp>
 
+// Headers in Boost
+#include <boost/optional.hpp>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/xml_parser.hpp>
+#include <boost/foreach.hpp>
+#include <boost/lexical_cast.hpp>
+
 namespace perception_pipeline
 {
     class ObjectClassesServerComponent: public rclcpp::Node
@@ -52,6 +59,9 @@ namespace perception_pipeline
     public:
         PERCEPTION_PIPELINE_OBJECT_CLASSES_SERVER_PUBLIC
         explicit ObjectClassesServerComponent(const rclcpp::NodeOptions & options);
+    private:
+        perception_msgs::msg::ObjectClasses object_classes_;
+        std::shared_ptr<rclcpp::Publisher<perception_msgs::msg::ObjectClasses> > object_classes_pub_;
     };
 }
 
