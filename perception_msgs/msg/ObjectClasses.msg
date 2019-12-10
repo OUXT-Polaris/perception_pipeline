@@ -1,1 +1,1 @@
-string[] classes
+perception_msgs/ObjectClass[] classes

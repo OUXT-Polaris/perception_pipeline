@@ -1,2 +1,2 @@
-string class_name
+uint8 object_class_id
 float32 score

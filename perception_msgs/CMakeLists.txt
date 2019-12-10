@@ -28,6 +28,7 @@ set(msg_files
   "msg/Score.msg"
   "msg/SourceInfo.msg"
   "msg/BoundingBox3D.msg"
+  "msg/ObjectClass.msg"
   "msg/ObjectClasses.msg"
   "msg/ObjectShape2D.msg"
   "msg/ObjectShape3D.msg"
