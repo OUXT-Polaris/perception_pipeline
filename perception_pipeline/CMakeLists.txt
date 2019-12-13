@@ -34,6 +34,9 @@ add_executable(object_classes_server_node src/object_classes_server_node.cpp)
 target_link_libraries(object_classes_server_node object_classes_server_component)
 ament_target_dependencies(object_classes_server_node rclcpp rclcpp_components perception_msgs)
 
+add_library(perception_node_base src/perception_node_base.cpp)
+ament_target_dependencies(perception_node_base rclcpp perception_msgs)
+
 # install executables/libs
 install(TARGETS
   object_classes_server_node
@@ -42,6 +45,7 @@ install(TARGETS
 
 install(TARGETS
   object_classes_server_component
+  perception_node_base
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)
@@ -59,5 +63,8 @@ if(BUILD_TESTING)
   #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+ament_export_libraries(perception_node_base)
+ament_export_include_directories(include)
 
 ament_package()
