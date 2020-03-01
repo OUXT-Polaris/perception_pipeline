@@ -37,6 +37,12 @@ ament_target_dependencies(object_classes_server_node rclcpp rclcpp_components pe
 add_library(perception_node_base src/perception_node_base.cpp)
 ament_target_dependencies(perception_node_base rclcpp perception_msgs)
 
+# Install header files
+install(
+  DIRECTORY "include/"
+  DESTINATION include
+)
+
 # install executables/libs
 install(TARGETS
   object_classes_server_node

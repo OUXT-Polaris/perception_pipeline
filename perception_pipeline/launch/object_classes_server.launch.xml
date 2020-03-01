@@ -1,0 +1,5 @@
+<launch>
+    <node ns="/object_classes_server" pkg="perception_pipeline" exec="object_classes_server_node">
+        <param name="object_classes_topic" value="~/object_classes"/>
+    </node>
+</launch>
